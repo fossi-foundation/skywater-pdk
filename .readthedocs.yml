@@ -46,5 +46,7 @@ submodules:
    - libraries/sky130_fd_sc_ms/latest
   recursive: false
 
-formats:
-  - pdf
+# HTML only. PDF (LaTeX) output adds ~7 min to the build (sphinx-latex +
+# latexmk), which exceeds Read the Docs' 15-minute community build-time
+# limit. Re-enable on a tier with a higher limit.
+formats: []
